@@ -7,10 +7,6 @@ const mongoose = require('mongoose');
 // const mongoURL=;process.env.MONGODB_URL_LOCAL; 
 
 const mongoURL= process.env.MONGODB_URL; 
-
-if (!mongoURL) {
-    throw new Error('MONGODB_URL is not defined in the .env file');
-  }
 // step 2-:setup the mongoDB connection 
 mongoose.connect(mongoURL, {
     useNewUrlParser: true,
