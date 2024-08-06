@@ -79,7 +79,7 @@ app.get('/png', function (req, res) {
     res.send('our work is completed');
   })
   
-// post route to add a person
+//post route to add a person
 // app.post('/person', async(req,res) =>{
 //   try{
 //     const data =req.body

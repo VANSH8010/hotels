@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express();
-const Person = require('./../models/Person'); 
+const Person = require('../models/Person'); 
 
 // post is used to save the data 
 router.post('/', async(req,res) =>{
