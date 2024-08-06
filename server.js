@@ -66,8 +66,7 @@ require('dotenv').config();
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());//req.body (data will be stored in a req.body)
 
-const Person = require('./models/Person'); 
-
+const Person = require('./models/Person1'); 
 
 app.get('/', function (req, res) {
   res.send('I vansh from this side.. Creating a server ');
