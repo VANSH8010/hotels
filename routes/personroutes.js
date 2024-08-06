@@ -21,15 +21,26 @@ router.post('/', async(req,res) =>{
     }
   })
 
-     router.post('/', async (req,res) =>{
-    try{
-        const response= await Person.find();
-        console.log("response fetched");
-        res.status(200).json(response);
-      } catch(err){
-      console.log(err);
-      res.status(500).json({error:'internal server error'})
-    }
+//      router.post('/', async (req,res) =>{
+//     try{
+//         const response= await Person.find();
+//         console.log("response fetched");
+//         res.status(200).json(response);
+//       } catch(err){
+//       console.log(err);
+//       res.status(500).json({error:'internal server error'})
+//     }
+// })
+
+router.get('/', async (req,res) =>{
+  try{
+      const response= await Person.find();
+      console.log("response fetched");
+      res.status(200).json(response);
+    } catch(err){
+    console.log(err);
+    res.status(500).json({error:'internal server error'})
+  }
 })
 
 

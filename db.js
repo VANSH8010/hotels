@@ -1,13 +1,20 @@
 //Step for extablish a connection between mongodb with node.js using mongoose library
 
 // step 1 -: import mongoose library and define the mongodb URL
+require('dotenv').config();
 const mongoose = require('mongoose');
-const mongoURL='mongodb://127.0.0.1:27017/hotels';   
 
+// const mongoURL=;process.env.MONGODB_URL_LOCAL; 
+
+const mongoURL= process.env.MONGODB_URL; 
+
+if (!mongoURL) {
+    throw new Error('MONGODB_URL is not defined in the .env file');
+  }
 // step 2-:setup the mongoDB connection 
 mongoose.connect(mongoURL, {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
+    useUnifiedTopology: true
 })
 
 // step 3 -: Access default connection abject representing the mongodb connection
